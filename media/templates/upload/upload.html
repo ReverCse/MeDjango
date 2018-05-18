@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+<br>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="title">
+                
+                <div class="custom-file">
+                    <input type="file" class="custom-control-file" name="toUpload" id="uploadFile">
+                    <label class="custom-file-label" for="uploadFile">Upload Your File</label>
+                </div>
+                <button class="btn" type="submit">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% include 'footer.html' %}
